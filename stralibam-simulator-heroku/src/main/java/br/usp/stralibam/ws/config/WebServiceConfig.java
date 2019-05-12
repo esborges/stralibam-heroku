@@ -68,4 +68,34 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	public XsdSchema sendAccepPackSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("send_accep_pack.xsd"));
 	}
+	
+	@Bean(name = "check_application")
+	public DefaultWsdl11Definition defaultWsdl11DefinitionCheckApplication(XsdSchema checkApplicationSchema) {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("CheckApplication");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/check_application");
+		wsdl11Definition.setSchema(checkApplicationSchema);
+		return wsdl11Definition;
+	}
+
+	@Bean
+	public XsdSchema checkApplicationSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("check_application.xsd"));
+	}
+	
+	@Bean(name = "reject_application")
+	public DefaultWsdl11Definition defaultWsdl11DefinitionRejectApplication(XsdSchema rejectApplicationSchema) {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("RejectApplication");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/reject_application");
+		wsdl11Definition.setSchema(rejectApplicationSchema);
+		return wsdl11Definition;
+	}
+
+	@Bean
+	public XsdSchema rejectApplicationSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("reject_application.xsd"));
+	}
 }

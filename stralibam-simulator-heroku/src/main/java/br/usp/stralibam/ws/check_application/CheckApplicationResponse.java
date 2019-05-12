@@ -6,7 +6,7 @@
 //
 
 
-package br.usp.stralibam.ws.assess_eligibility_resp_time;
+package br.usp.stralibam.ws.check_application;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="slos" type="{http://www.usp.br/stralibam/ws/assess_eligibility_resp_time}SLOType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="slos" type="{http://www.usp.br/stralibam/ws/check_application}SLOType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,8 +39,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "slos"
 })
-@XmlRootElement(name = "assessEligibilityRespTimeResponse")
-public class AssessEligibilityRespTimeResponse {
+@XmlRootElement(name = "checkApplicationResponse")
+public class CheckApplicationResponse {
 
     protected List<SLOType> slos;
 

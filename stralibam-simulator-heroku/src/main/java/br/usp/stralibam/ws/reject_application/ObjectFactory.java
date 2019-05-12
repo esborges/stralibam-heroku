@@ -6,7 +6,7 @@
 //
 
 
-package br.usp.stralibam.ws.assess_eligibility_resp_time;
+package br.usp.stralibam.ws.reject_application;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
@@ -17,7 +17,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the br.usp.stralibam.ws.assess_eligibility_resp_time package. 
+ * generated in the br.usp.stralibam.ws.reject_application package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -31,21 +31,21 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Slos_QNAME = new QName("http://www.usp.br/stralibam/ws/assess_eligibility_resp_time", "slos");
+    private final static QName _Slos_QNAME = new QName("http://www.usp.br/stralibam/ws/reject_application", "slos");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: br.usp.stralibam.ws.assess_eligibility_resp_time
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: br.usp.stralibam.ws.reject_application
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link AssessEligibilityRespTimeRequest }
+     * Create an instance of {@link RejectApplicationRequest }
      * 
      */
-    public AssessEligibilityRespTimeRequest createAssessEligibilityRespTimeRequest() {
-        return new AssessEligibilityRespTimeRequest();
+    public RejectApplicationRequest createRejectApplicationRequest() {
+        return new RejectApplicationRequest();
     }
 
     /**
@@ -57,18 +57,18 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AssessEligibilityRespTimeResponse }
+     * Create an instance of {@link RejectApplicationResponse }
      * 
      */
-    public AssessEligibilityRespTimeResponse createAssessEligibilityRespTimeResponse() {
-        return new AssessEligibilityRespTimeResponse();
+    public RejectApplicationResponse createRejectApplicationResponse() {
+        return new RejectApplicationResponse();
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SLOType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.usp.br/stralibam/ws/assess_eligibility_resp_time", name = "slos")
+    @XmlElementDecl(namespace = "http://www.usp.br/stralibam/ws/reject_application", name = "slos")
     public JAXBElement<SLOType> createSlos(SLOType value) {
         return new JAXBElement<SLOType>(_Slos_QNAME, SLOType.class, null, value);
     }

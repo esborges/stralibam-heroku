@@ -5,5 +5,5 @@
 // Generated on: 2019.05.12 at 10:49:57 AM BRT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.usp.br/stralibam/ws/assess_eligibility_availability", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package br.usp.stralibam.ws.assess_eligibility_availability;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.usp.br/stralibam/ws/check_application", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package br.usp.stralibam.ws.check_application;

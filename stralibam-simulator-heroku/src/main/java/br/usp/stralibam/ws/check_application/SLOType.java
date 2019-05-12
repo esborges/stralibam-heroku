@@ -6,7 +6,7 @@
 //
 
 
-package br.usp.stralibam.ws.assess_eligibility_resp_time;
+package br.usp.stralibam.ws.check_application;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
