@@ -39,19 +39,34 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new SimpleXsdSchema(new ClassPathResource("assess_eligibility_availability.xsd"));
 	}
 	
-	@Bean(name = "assess_eligibility_resp_time")
-	public DefaultWsdl11Definition defaultWsdl11DefinitionAssessLoan(XsdSchema assessEligibilityRespTimeSchema) {
+	@Bean(name = "register_loan_risk")
+	public DefaultWsdl11Definition defaultWsdl11DefinitionRegisterLoanRisk(XsdSchema registerLoanRiskSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("AssessEligibilityRespTime");
+		wsdl11Definition.setPortTypeName("RegisterLoanRisk");
 		wsdl11Definition.setLocationUri("/ws");
-		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/assess_eligibility_resp_time");
-		wsdl11Definition.setSchema(assessEligibilityRespTimeSchema);
+		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/register_loan_risk");
+		wsdl11Definition.setSchema(registerLoanRiskSchema);
 		return wsdl11Definition;
 	}
 
 	@Bean
-	public XsdSchema assessEligibilityRespTimeSchema() {
-		return new SimpleXsdSchema(new ClassPathResource("assess_eligibility_resp_time.xsd"));
+	public XsdSchema registerLoanRiskSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("register_loan_risk.xsd"));
+	}
+	
+	@Bean(name = "register_elegibility")
+	public DefaultWsdl11Definition defaultWsdl11DefinitionRegisterElegibility(XsdSchema registerElegibilitychema) {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("RegisterElegibility");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/register_elegibility");
+		wsdl11Definition.setSchema(registerElegibilitychema);
+		return wsdl11Definition;
+	}
+
+	@Bean
+	public XsdSchema registerElegibilitychema() {
+		return new SimpleXsdSchema(new ClassPathResource("register_elegibility.xsd"));
 	}
 	
 	@Bean(name = "send_accep_pack")

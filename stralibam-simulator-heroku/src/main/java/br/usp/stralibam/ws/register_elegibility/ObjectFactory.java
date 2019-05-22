@@ -6,7 +6,7 @@
 //
 
 
-package br.usp.stralibam.ws.send_accep_pack;
+package br.usp.stralibam.ws.register_elegibility;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
@@ -17,7 +17,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the br.usp.stralibam.ws.send_accep_pack package. 
+ * generated in the br.usp.stralibam.ws.register_elegibility package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -31,21 +31,21 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Slos_QNAME = new QName("http://www.usp.br/stralibam/ws/send_accep_pack", "slos");
+    private final static QName _Slos_QNAME = new QName("http://www.usp.br/stralibam/ws/register_elegibility", "slos");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: br.usp.stralibam.ws.send_accep_pack
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: br.usp.stralibam.ws.register_elegibility
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link SendAccepPackRequest }
+     * Create an instance of {@link RegisterElegibilityRequest }
      * 
      */
-    public SendAccepPackRequest createSendAccepPackRequest() {
-        return new SendAccepPackRequest();
+    public RegisterElegibilityRequest createRegisterElegibilityRequest() {
+        return new RegisterElegibilityRequest();
     }
 
     /**
@@ -57,18 +57,18 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SendAccepPackResponse }
+     * Create an instance of {@link RegisterElegibilityResponse }
      * 
      */
-    public SendAccepPackResponse createSendAccepPackResponse() {
-        return new SendAccepPackResponse();
+    public RegisterElegibilityResponse createRegisterElegibilityResponse() {
+        return new RegisterElegibilityResponse();
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SLOType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.usp.br/stralibam/ws/send_accep_pack", name = "slos")
+    @XmlElementDecl(namespace = "http://www.usp.br/stralibam/ws/register_elegibility", name = "slos")
     public JAXBElement<SLOType> createSlos(SLOType value) {
         return new JAXBElement<SLOType>(_Slos_QNAME, SLOType.class, null, value);
     }

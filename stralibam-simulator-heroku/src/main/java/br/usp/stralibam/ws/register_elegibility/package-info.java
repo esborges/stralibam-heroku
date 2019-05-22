@@ -5,5 +5,5 @@
 // Generated on: 2019.05.22 at 01:40:17 PM BRT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.usp.br/stralibam/ws/send_accep_pack", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package br.usp.stralibam.ws.send_accep_pack;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.usp.br/stralibam/ws/register_elegibility", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package br.usp.stralibam.ws.register_elegibility;

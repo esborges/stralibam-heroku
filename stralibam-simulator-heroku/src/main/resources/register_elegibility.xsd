@@ -1,9 +1,9 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:tns="http://www.usp.br/stralibam/ws/assess_eligibility_resp_time"
-	targetNamespace="http://www.usp.br/stralibam/ws/assess_eligibility_resp_time"
+	xmlns:tns="http://www.usp.br/stralibam/ws/register_elegibility"
+	targetNamespace="http://www.usp.br/stralibam/ws/register_elegibility"
 	elementFormDefault="qualified">
 
-	<xs:element name="assessEligibilityRespTimeRequest">
+	<xs:element name="registerElegibilityRequest">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="slos" type="tns:SLOType" minOccurs="0" maxOccurs="unbounded" />
@@ -11,7 +11,7 @@
 		</xs:complexType>
 	</xs:element>
 	
-	<xs:element name="assessEligibilityRespTimeResponse">
+	<xs:element name="registerElegibilityResponse">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="slos" type="tns:SLOType" minOccurs="0" maxOccurs="unbounded" />

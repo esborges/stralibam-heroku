@@ -6,7 +6,7 @@
 //
 
 
-package br.usp.stralibam.ws.reject_application;
+package br.usp.stralibam.ws.register_loan_risk;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

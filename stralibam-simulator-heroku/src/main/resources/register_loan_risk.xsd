@@ -1,9 +1,9 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:tns="http://www.usp.br/stralibam/ws/assess_eligibility"
-	targetNamespace="http://www.usp.br/stralibam/ws/assess_eligibility"
+	xmlns:tns="http://www.usp.br/stralibam/ws/register_loan_risk"
+	targetNamespace="http://www.usp.br/stralibam/ws/register_loan_risk"
 	elementFormDefault="qualified">
 
-	<xs:element name="assessEligibilityRequest">
+	<xs:element name="registerLoanRiskRequest">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="slos" type="tns:SLOType" minOccurs="0" maxOccurs="unbounded" />
@@ -11,7 +11,7 @@
 		</xs:complexType>
 	</xs:element>
 	
-	<xs:element name="assessEligibilityResponse">
+	<xs:element name="registerLoanRiskResponse">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="slos" type="tns:SLOType" minOccurs="0" maxOccurs="unbounded" />
@@ -33,5 +33,5 @@
 				minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-	
+
 </xs:schema>

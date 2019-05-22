@@ -6,7 +6,7 @@
 //
 
 
-package br.usp.stralibam.ws.reject_application;
+package br.usp.stralibam.ws.register_elegibility;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="slos" type="{http://www.usp.br/stralibam/ws/reject_application}SLOType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="slos" type="{http://www.usp.br/stralibam/ws/register_elegibility}SLOType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,8 +39,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "slos"
 })
-@XmlRootElement(name = "rejectApplicationRequest")
-public class RejectApplicationRequest {
+@XmlRootElement(name = "registerElegibilityResponse")
+public class RegisterElegibilityResponse {
 
     protected List<SLOType> slos;
 
