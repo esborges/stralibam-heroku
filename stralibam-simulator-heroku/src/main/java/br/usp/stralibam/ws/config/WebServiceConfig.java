@@ -24,19 +24,19 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new ServletRegistrationBean(servlet, "/ws/*");
 	}
 
-	@Bean(name = "assess_eligibility_availability")
-	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema assessEligibilityAvailabilitySchema) {
+	@Bean(name = "assess_eligibility")
+	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema assessEligibilitySchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("AssessEligibilityAvailability");
+		wsdl11Definition.setPortTypeName("AssessEligibility");
 		wsdl11Definition.setLocationUri("/ws");
-		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/assess_eligibility_availability");
-		wsdl11Definition.setSchema(assessEligibilityAvailabilitySchema);
+		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/assess_eligibility");
+		wsdl11Definition.setSchema(assessEligibilitySchema);
 		return wsdl11Definition;
 	}
 
 	@Bean
-	public XsdSchema assessEligibilityAvailabilitySchema() {
-		return new SimpleXsdSchema(new ClassPathResource("assess_eligibility_availability.xsd"));
+	public XsdSchema assessEligibilitySchema() {
+		return new SimpleXsdSchema(new ClassPathResource("assess_eligibility.xsd"));
 	}
 	
 	@Bean(name = "register_loan_risk")
