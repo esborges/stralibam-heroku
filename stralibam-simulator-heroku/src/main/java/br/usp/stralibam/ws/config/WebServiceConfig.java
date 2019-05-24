@@ -119,7 +119,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("PrepareAccepPack");
 		wsdl11Definition.setLocationUri("/ws");
-		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/reject_application");
+		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/prepare_accep_pack");
 		wsdl11Definition.setSchema(prepareAccepPackSchema);
 		return wsdl11Definition;
 	}
