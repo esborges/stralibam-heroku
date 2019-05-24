@@ -6,7 +6,7 @@
 //
 
 
-package br.usp.stralibam.ws.send_accep_pack;
+package br.usp.stralibam.ws.prepare_accep_pack;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

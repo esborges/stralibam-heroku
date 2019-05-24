@@ -5,5 +5,5 @@
 // Generated on: 2019.05.23 at 11:27:37 PM BRT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.usp.br/stralibam/ws/check_application", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package br.usp.stralibam.ws.check_application;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.usp.br/stralibam/ws/prepare_accep_pack", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package br.usp.stralibam.ws.prepare_accep_pack;

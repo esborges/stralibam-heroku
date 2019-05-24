@@ -113,4 +113,19 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	public XsdSchema rejectApplicationSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("reject_application.xsd"));
 	}
+	
+	@Bean(name = "prepare_accep_pack")
+	public DefaultWsdl11Definition defaultWsdl11DefinitionPrepareAccepPack(XsdSchema prepareAccepPackSchema) {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("PrepareAccepPack");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://www.usp.br/stralibam/ws/reject_application");
+		wsdl11Definition.setSchema(prepareAccepPackSchema);
+		return wsdl11Definition;
+	}
+
+	@Bean
+	public XsdSchema prepareAccepPackSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("prepare_accep_pack.xsd"));
+	}
 }

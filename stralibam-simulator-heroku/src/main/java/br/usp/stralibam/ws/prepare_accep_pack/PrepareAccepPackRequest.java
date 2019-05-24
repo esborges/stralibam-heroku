@@ -6,7 +6,7 @@
 //
 
 
-package br.usp.stralibam.ws.assess_eligibility;
+package br.usp.stralibam.ws.prepare_accep_pack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="slos" type="{http://www.usp.br/stralibam/ws/assess_eligibility}SLOType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="slos" type="{http://www.usp.br/stralibam/ws/prepare_accep_pack}SLOType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,8 +39,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "slos"
 })
-@XmlRootElement(name = "assessEligibilityResponse")
-public class AssessEligibilityResponse {
+@XmlRootElement(name = "prepareAccepPackRequest")
+public class PrepareAccepPackRequest {
 
     protected List<SLOType> slos;
 

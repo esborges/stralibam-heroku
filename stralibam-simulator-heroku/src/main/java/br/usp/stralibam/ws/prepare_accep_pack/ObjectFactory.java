@@ -6,7 +6,7 @@
 //
 
 
-package br.usp.stralibam.ws.assess_eligibility;
+package br.usp.stralibam.ws.prepare_accep_pack;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
@@ -17,7 +17,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the br.usp.stralibam.ws.assess_eligibility package. 
+ * generated in the br.usp.stralibam.ws.prepare_accep_pack package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -31,21 +31,21 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Slos_QNAME = new QName("http://www.usp.br/stralibam/ws/assess_eligibility", "slos");
+    private final static QName _Slos_QNAME = new QName("http://www.usp.br/stralibam/ws/prepare_accep_pack", "slos");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: br.usp.stralibam.ws.assess_eligibility
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: br.usp.stralibam.ws.prepare_accep_pack
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link AssessEligibilityResponse }
+     * Create an instance of {@link PrepareAccepPackResponse }
      * 
      */
-    public AssessEligibilityResponse createAssessEligibilityResponse() {
-        return new AssessEligibilityResponse();
+    public PrepareAccepPackResponse createPrepareAccepPackResponse() {
+        return new PrepareAccepPackResponse();
     }
 
     /**
@@ -57,18 +57,18 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AssessEligibilityRequest }
+     * Create an instance of {@link PrepareAccepPackRequest }
      * 
      */
-    public AssessEligibilityRequest createAssessEligibilityRequest() {
-        return new AssessEligibilityRequest();
+    public PrepareAccepPackRequest createPrepareAccepPackRequest() {
+        return new PrepareAccepPackRequest();
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SLOType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.usp.br/stralibam/ws/assess_eligibility", name = "slos")
+    @XmlElementDecl(namespace = "http://www.usp.br/stralibam/ws/prepare_accep_pack", name = "slos")
     public JAXBElement<SLOType> createSlos(SLOType value) {
         return new JAXBElement<SLOType>(_Slos_QNAME, SLOType.class, null, value);
     }
