@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
-public class AssessLoanService {
+public class AssessEligibilityAvailabilityService {
 	
 	@Autowired
 	private SloExecutionTemplate sloExecutionTemplate;

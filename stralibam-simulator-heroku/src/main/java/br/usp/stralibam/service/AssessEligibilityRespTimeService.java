@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
-public class SendAccepPackService {
+public class AssessEligibilityRespTimeService {
 	
 	@Autowired
 	private SloExecutionTemplate sloExecutionTemplate;
@@ -20,9 +20,10 @@ public class SendAccepPackService {
 		sloExecutionTemplate.load();
 
 		SloResult sloResult = null;
-		sloResult = Fixture.from(SloResult.class).gimme("slo_boolean_result");
+		sloResult = Fixture.from(SloResult.class).gimme("slo_integer_result");
 		
-		log.info("result -> " + sloResult.getBooleanTargetValue());
+		log.info("result -> " + sloResult.getIntegerTargetValue());
 		return sloResult;
 	}
+
 }
