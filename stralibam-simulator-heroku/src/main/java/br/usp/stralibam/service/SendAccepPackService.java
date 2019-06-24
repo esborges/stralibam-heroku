@@ -22,6 +22,12 @@ public class SendAccepPackService {
 		SloResult sloResult = null;
 		sloResult = Fixture.from(SloResult.class).gimme("slo_boolean_result");
 		
+		if(sloResult.getIntegerTargetValue() <= 7) {
+			sloResult.setBooleanTargetValue(true);
+		} else {
+			sloResult.setBooleanTargetValue(false);
+		}
+		
 		log.info("result -> " + sloResult.getBooleanTargetValue());
 		return sloResult;
 	}

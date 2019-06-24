@@ -1,7 +1,6 @@
 package br.usp.stralibam.ws.endpoint;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -21,9 +20,6 @@ public class SendAccepPackEndpoint {
 	@Autowired
 	private SendAccepPackService checkCredHistService;
 	
-	@Autowired
-	private Environment env;
-
 	private static final String NAMESPACE_URI = "http://www.usp.br/stralibam/ws/send_accep_pack";
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "sendAccepPackRequest")
@@ -31,13 +27,11 @@ public class SendAccepPackEndpoint {
 	@ResponsePayload
 	public SendAccepPackResponse sendAccepPackRequest(@RequestPayload SendAccepPackRequest request) throws Exception {
 		try {
-			Boolean instability = new Boolean(env.getProperty("application.instability"));
-			
 			SloResult slo = checkCredHistService.getSLOResult();
 			SendAccepPackResponse appPropertyResponse = new SendAccepPackResponse();
 			
 			SLOType sloType = new SLOType();
-			sloType.setQoSMeasuredValue(instability ? slo.getBooleanTargetValue().toString() : "true");
+			sloType.setQoSMeasuredValue(slo.getBooleanTargetValue().toString());
 			sloType.setId("SEND_ACCEP_PACK_AVAILA");
 			sloType.setQoSAttribute("Availability");
 			appPropertyResponse.getSlos().add(sloType);

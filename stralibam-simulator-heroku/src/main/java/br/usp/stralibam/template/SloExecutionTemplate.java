@@ -14,13 +14,19 @@ public class SloExecutionTemplate implements TemplateLoader {
 		
 		Fixture.of(SloResult.class).addTemplate("slo_boolean_result", new Rule() {
             {
-                add("booleanTargetValue", random(Boolean.class));
+                add("integerTargetValue", random(Integer.class, range(1, 10)));
             }
         });	
 		
-		Fixture.of(SloResult.class).addTemplate("slo_integer_result", new Rule() {
+		Fixture.of(SloResult.class).addTemplate("slo_integer_result_menor_60", new Rule() {
             {
-                add("integerTargetValue", random(Integer.class, range(30, 80)));
+                add("integerTargetValue", random(Integer.class, range(10, 60)));
+            }
+        });
+		
+		Fixture.of(SloResult.class).addTemplate("slo_integer_result_maior_60", new Rule() {
+            {
+                add("integerTargetValue", random(Integer.class, range(61, 120)));
             }
         });
 	}

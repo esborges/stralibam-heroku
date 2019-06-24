@@ -20,7 +20,13 @@ public class AssessEligibilityRespTimeService {
 		sloExecutionTemplate.load();
 
 		SloResult sloResult = null;
-		sloResult = Fixture.from(SloResult.class).gimme("slo_integer_result");
+		sloResult = Fixture.from(SloResult.class).gimme("slo_boolean_result");
+		
+		if(sloResult.getIntegerTargetValue() <= 7) {
+			sloResult = Fixture.from(SloResult.class).gimme("slo_integer_result_menor_igual_60");
+		} else {
+			sloResult = Fixture.from(SloResult.class).gimme("slo_integer_result_maior_60");
+		}
 		
 		log.info("result -> " + sloResult.getIntegerTargetValue());
 		return sloResult;

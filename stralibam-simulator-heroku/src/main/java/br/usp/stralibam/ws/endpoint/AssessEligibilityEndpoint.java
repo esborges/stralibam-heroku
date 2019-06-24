@@ -1,7 +1,6 @@
 package br.usp.stralibam.ws.endpoint;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -25,9 +24,6 @@ public class AssessEligibilityEndpoint {
 	@Autowired
 	private AssessEligibilityRespTimeService assessEligibilityRespTimeService;
 	
-	@Autowired
-	private Environment env;
-
 	private static final String NAMESPACE_URI = "http://www.usp.br/stralibam/ws/assess_eligibility";
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "assessEligibilityRequest")
@@ -36,19 +32,17 @@ public class AssessEligibilityEndpoint {
 	public AssessEligibilityResponse assessEligibilityAvailabilityRequest(@RequestPayload AssessEligibilityRequest request) throws Exception {
 		try {
 			
-			Boolean instability = new Boolean(env.getProperty("application.instability"));
-			
 			SloResult slo = assessEligibilityAvailabilityService.getSLOResult();
 			AssessEligibilityResponse appPropertyResponse = new AssessEligibilityResponse();
 			SLOType sloType = new SLOType();
-			sloType.setQoSMeasuredValue(instability ? slo.getBooleanTargetValue().toString() : "true");
+			sloType.setQoSMeasuredValue(slo.getBooleanTargetValue().toString());
 			sloType.setId("ASSESS_ELEG_AVAIABILITY");
 			sloType.setQoSAttribute("Availability");
 			appPropertyResponse.getSlos().add(sloType);
 			
 			slo = assessEligibilityRespTimeService.getSLOResult();
 			sloType = new SLOType();
-			sloType.setQoSMeasuredValue(instability ? slo.getIntegerTargetValue().toString() : "55" );
+			sloType.setQoSMeasuredValue(slo.getIntegerTargetValue().toString());
 			sloType.setId("ASSESS_ELEG_RESP_TIME");
 			sloType.setQoSAttribute("Response Time");
 			appPropertyResponse.getSlos().add(sloType);
