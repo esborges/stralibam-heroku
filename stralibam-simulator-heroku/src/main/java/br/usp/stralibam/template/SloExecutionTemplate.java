@@ -18,7 +18,7 @@ public class SloExecutionTemplate implements TemplateLoader {
             }
         });	
 		
-		Fixture.of(SloResult.class).addTemplate("slo_integer_result_menor_60", new Rule() {
+		Fixture.of(SloResult.class).addTemplate("slo_integer_result_menor_igual_60", new Rule() {
             {
                 add("integerTargetValue", random(Integer.class, range(10, 60)));
             }
